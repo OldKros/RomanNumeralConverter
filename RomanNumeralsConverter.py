@@ -15,19 +15,11 @@ if num <= 0 or num >= 4000: # only going up to 3999 for this excersize
 outputStr = ""
 
 # all the numerals in a dictionary with the corresponding keys
-conversionTable =  {1000: "M",
-                    900: "CM",
-                    500: "D",
-                    400: "CD",
-                    100: "C",
-                    90: "XC",
-                    50: "L",
-                    40: "XL",
-                    10: "X",
-                    9: "IX",
-                    5: "V",
-                    4: "IV",
-                    1: "I"}
+conversionTable = { 1000: "M",
+                    900: "CM", 500: "D", 400: "CD", 100: "C",
+                    90: "XC", 50: "L", 40: "XL",10: "X",
+                    9: "IX", 5: "V", 4: "IV", 1: "I"
+}
 
 # seperate the thousands, hundreds, tens and ones
 thousands = (num // 1000) * 1000
@@ -44,15 +36,13 @@ for i in range(thousands // 1000):
 
 def convert_digit_to_numerals(n: int, conversionTable: dict):
     outputStr = ""
-
+    # oht = ones_hundreds_or_thousands
     # base hundreds
     if n // 100 > 0:
         oht = 100
-
     # base tens
     elif n // 10 > 0:
         oht = 10
-
     # base ones
     else:
         oht = 1
