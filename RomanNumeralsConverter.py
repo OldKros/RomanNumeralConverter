@@ -8,7 +8,7 @@ except (IndexError, ValueError): # if there is no argument or it is not an integ
     print("Please enter a number from 1-3999 on the command line")
     exit(1)
 
-if num >= 4000: # only going up to 3999 for this excersize
+if num == 0 or num >= 4000: # only going up to 3999 for this excersize
     print("Please enter a number from 1-3999")
     exit(1)
 
