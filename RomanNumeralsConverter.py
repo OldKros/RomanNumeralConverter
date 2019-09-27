@@ -21,7 +21,8 @@ conversionTable = { 1000: "M",
                     9: "IX", 5: "V", 4: "IV", 1: "I"
 }
 
-# seperate the thousands, hundreds, tens and ones
+# seperate the thousands, hundreds, tens and ones and make sure the formant for numbers are n000, n00, n0, n
+# (floor division to remove the characters we don't care about (hundreds tens and ones for thousands etc))
 thousands = (num // 1000) * 1000
 num %= 1000
 hundreds = (num // 100) * 100
