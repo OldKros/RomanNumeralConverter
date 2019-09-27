@@ -57,7 +57,7 @@ def convert_digit_to_numerals(n: int, conversionTable: dict):
     else:
         oht = 1
 
-    digit = int(str(n).rstrip("0") if len(str(n)) > 1 else str(n))
+    digit = int(str(n).rstrip("0")) if len(str(n)) > 1 else n
 
     # if the number * the base we are working with is in the table, add it
     if digit * oht in conversionTable.keys():
