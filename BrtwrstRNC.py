@@ -6,5 +6,5 @@ conversion_lookup = (
     ('', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'),
     ('', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX')
 )
-num = '73'
+num = input()
 print(''.join([conversion_lookup[i][int(n)] for i,n in enumerate(num.zfill(4))]))
